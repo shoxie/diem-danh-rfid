@@ -11,7 +11,7 @@ import CustomTable from "@/components/Table";
 const Home = () => {
   const [data, setData] = useState<Payload[]>([])
   const [value, loading, error] = useCollection(
-    collection(getFirestore(firebase_app), 'rfid_ids'),
+    collection(getFirestore(firebase_app), 'diem-danh'),
     {
       snapshotListenOptions: { includeMetadataChanges: true },
     }
@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <div>
-      <CustomTable data={data} table="rfid_ids" />
+      <CustomTable data={data} table={"diem-danh"} />
     </div>
   )
 }
