@@ -23,12 +23,18 @@ dependencies:
   framer-motion:
     specifier: ^10.16.4
     version: 10.16.4(react-dom@18.2.0)(react@18.2.0)
+  jotai:
+    specifier: ^2.6.0
+    version: 2.6.0(@types/react@18.2.28)(react@18.2.0)
   next:
     specifier: 13.5.4
     version: 13.5.4(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: ^18
     version: 18.2.0
+  react-csv:
+    specifier: ^2.2.2
+    version: 2.2.2
   react-dom:
     specifier: ^18
     version: 18.2.0(react@18.2.0)
@@ -43,6 +49,9 @@ devDependencies:
   '@types/react':
     specifier: ^18
     version: 18.2.28
+  '@types/react-csv':
+    specifier: ^1.1.9
+    version: 1.1.9
   '@types/react-dom':
     specifier: ^18
     version: 18.2.13
@@ -2098,6 +2107,12 @@ packages:
   /@types/prop-types@15.7.8:
     resolution: {integrity: sha512-kMpQpfZKSCBqltAJwskgePRaYRFukDkm1oItcAbC3gNELR20XIBcN9VRgg4+m8DKsTfkWeA4m4Imp4DDuWy7FQ==}
 
+  /@types/react-csv@1.1.9:
+    resolution: {integrity: sha512-DKAuokuxxR7EGdIVBafvNDvTJuq4Dn7BQpdm6JzdMGJqcC8mOdEGloZNf2umpiNgQ/3iN/yttoEvdXgM3TDZOQ==}
+    dependencies:
+      '@types/react': 18.2.28
+    dev: true
+
   /@types/react-dom@18.2.13:
     resolution: {integrity: sha512-eJIUv7rPP+EC45uNYp/ThhSpE16k22VJUknt5OLoH9tbXoi8bMhwLf5xRuWMywamNbWzhrSmU7IBJfPup1+3fw==}
     dependencies:
@@ -3659,6 +3674,22 @@ packages:
     hasBin: true
     dev: true
 
+  /jotai@2.6.0(@types/react@18.2.28)(react@18.2.0):
+    resolution: {integrity: sha512-Vt6hsc04Km4j03l+Ax+Sc+FVft5cRJhqgxt6GTz6GM2eM3DyX3CdBdzcG0z2FrlZToL1/0OAkqDghIyARWnSuQ==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=17.0.0'
+      react: '>=17.0.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      '@types/react': 18.2.28
+      react: 18.2.0
+    dev: false
+
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -4154,6 +4185,10 @@ packages:
     dependencies:
       '@babel/runtime': 7.23.2
       react: 18.2.0
+    dev: false
+
+  /react-csv@2.2.2:
+    resolution: {integrity: sha512-RG5hOcZKZFigIGE8LxIEV/OgS1vigFQT4EkaHeKgyuCbUAu9Nbd/1RYq++bJcJJ9VOqO/n9TZRADsXNDR4VEpw==}
     dev: false
 
   /react-dom@18.2.0(react@18.2.0):

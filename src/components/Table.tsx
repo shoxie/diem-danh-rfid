@@ -16,12 +16,12 @@ const CustomTable = ({ data, table }: { data: Payload[], table: string }) => {
     return (
         <TableContainer>
             <Table variant='simple'>
-                <Thead>
+                <Thead backgroundColor={"blue.700"} textColor={"white"}>
                     <Tr>
-                        <Th>ID</Th>
-                        <Th>Tên sinh viên</Th>
-                        <Th>Thời gian điểm danh</Th>
-                        <Th>Hành động</Th>
+                        <Th color={"white"}>ID</Th>
+                        <Th color={"white"}>Tên sinh viên</Th>
+                        <Th color={"white"}>Thời gian điểm danh</Th>
+                        <Th color={"white"}>Hành động</Th>
                     </Tr>
                 </Thead>
                 <Tbody>
