@@ -25,9 +25,12 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraBaseProvider theme={theme}>
       <HStack className='w-full px-5 py-2' justify={"space-between"}>
-        <Text>Phần mềm điểm danh sinh viên</Text>
         <HStack>
-          <Button onClick={() => router.push("/")}>Danh sách sinh viên</Button>
+          <img src={"/logo.jpg"} alt="logo" className='w-16 h-16' />
+          <Text>Phần mềm điểm danh học sinh</Text>
+        </HStack>
+        <HStack>
+          <Button onClick={() => router.push("/")}>Danh sách học sinh</Button>
           <Button onClick={() => router.push("/diem-danh")}>Danh sách điểm danh</Button>
           {
             router.pathname === "/diem-danh" && <CSVLink data={csvArray} className="bg-blue-600 text-white rounded-lg px-2 py-2">Tải danh sách điểm danh</CSVLink>

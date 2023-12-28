@@ -11,7 +11,7 @@ import {
     TableContainer,
 } from '@chakra-ui/react'
 import CustomModal from './Modal'
-
+import { format } from 'date-fns'
 const CustomTable = ({ data, table }: { data: Payload[], table: string }) => {
     return (
         <TableContainer>
@@ -19,7 +19,7 @@ const CustomTable = ({ data, table }: { data: Payload[], table: string }) => {
                 <Thead backgroundColor={"blue.700"} textColor={"white"}>
                     <Tr>
                         <Th color={"white"}>ID</Th>
-                        <Th color={"white"}>Tên sinh viên</Th>
+                        <Th color={"white"}>Tên học sinh</Th>
                         <Th color={"white"}>Thời gian điểm danh</Th>
                         <Th color={"white"}>Hành động</Th>
                     </Tr>
@@ -29,7 +29,7 @@ const CustomTable = ({ data, table }: { data: Payload[], table: string }) => {
                         <Tr key={item.timestamp}>
                             <Td>{item.id}</Td>
                             <Td>{item.name}</Td>
-                            <Td>{new Date(((item.timestamp as unknown) as number) * 1000).toLocaleDateString()}</Td>
+                            <Td>{format(new Date(item.timestamp), "MM/dd/yyyy hh:mm:ss")}</Td>
                             <Td><CustomModal record={item} table={table} /></Td>
                         </Tr>
                     ))}
