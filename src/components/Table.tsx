@@ -29,7 +29,7 @@ const CustomTable = ({ data, table }: { data: Payload[], table: string }) => {
                         <Tr key={item.timestamp}>
                             <Td>{item.id}</Td>
                             <Td>{item.name}</Td>
-                            <Td>{format(new Date(item.timestamp), "MM/dd/yyyy hh:mm:ss")}</Td>
+                            <Td>{format(new Date(((item.timestamp as unknown) as number) * 1000), "MM/dd/yyyy hh:mm:ss")}</Td>
                             <Td><CustomModal record={item} table={table} /></Td>
                         </Tr>
                     ))}
